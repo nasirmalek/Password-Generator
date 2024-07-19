@@ -112,6 +112,33 @@ textarea {
   filter: var(--filter2);
 }
 
+.notification {
+  visibility: hidden;
+  width: 250px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+}
+
+.notification.show {
+  visibility: visible;
+  animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {opacity: 0;}
+  10%, 90% {opacity: 1;}
+}
+
+
 .btn:hover {
   filter: var(--filter3);
   transition: 0.3s ease-in-out;
